@@ -85,6 +85,21 @@
   </div>
 </nav>
 
+<div id="bannedModal" class="modal banned-modal">
+  <div class="modal-content banned-content">
+    <button class="close" onclick="logoutAndClose()">×</button>
+    <h2>Uh-oh!</h2>
+    <p>
+      Your account is banned from Formika :c<br>
+      This ban is indefinite and cannot be undone...
+    </p>
+    <blockquote>
+      If you think this is a mistake, feel free to email us or join our discord (recommended you join the discord!)
+    </blockquote>
+    <button class="cta-button" onclick="contactSupport()">Contact Support</button>
+  </div>
+</div>
+
 <div class="alert-banner" id="alertBanner" style="display: none;">
   <span id="alertBannerText">This is an alert message!</span>
   <button class="close-btn" onclick="closeAlert()">×</button>
@@ -123,34 +138,60 @@
 </footer>
 
 <script>
-  function decodeJWT(token) {
-  try {
-    const payload = token.split(".")[1];
-    return JSON.parse(atob(payload));
-  } catch {
-    return null;
-  }
-}
-
+async function initNavbar() {
   const token = localStorage.getItem("token");
   const loggedInNav = document.getElementById("logged-in-navbar");
   const loggedOutNav = document.getElementById("logged-out-navbar");
-  if (token) {
+  const bannedModal = document.getElementById("bannedModal");
+  if (!token) {
+    loggedInNav.style.display = "none";
+    loggedOutNav.style.display = "flex";
+    return;
+  }
+  try {
+    const res = await fetch("https://formika.buddywinte.workers.dev/userInfo", {
+      method: "GET",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+      },
+    });
+
+    const data = await res.json();
+
+    if (!res.ok && data.error && data.error.includes("Access Denied")) {
+      document.body.innerHTML = "";
+      document.body.appendChild(bannedModal);
+      bannedModal.style.display = "flex";
+      return;
+    }
+    if (!res.ok) {
+      console.error("Error fetching user info:", data.error);
+      loggedInNav.style.display = "none";
+      loggedOutNav.style.display = "flex";
+      return;
+    }
     loggedInNav.style.display = "flex";
     loggedOutNav.style.display = "none";
-    const decoded = decodeJWT(token);
-    console.log(decoded);
-    if (decoded && decoded.username) {
-      document.getElementById("username").textContent = decoded.username;
-    }
-  } else {
+    if (data.username) document.getElementById("username").textContent = data.username;
+    if (data.role) document.getElementById("role").textContent = data.role;
+  } catch (err) {
+    console.error("Failed to fetch user info:", err);
     loggedInNav.style.display = "none";
     loggedOutNav.style.display = "flex";
   }
-  function toggleDropdown() {
-    const menu = document.getElementById("settings-dropdown");
-    menu.classList.toggle("show");
-  }
+}
+initNavbar();
+function toggleDropdown() {
+  const menu = document.getElementById("settings-dropdown");
+  menu.classList.toggle("show");
+}
+function logoutAndClose() {
+  localStorage.removeItem("token");
+  window.location.reload();
+}
+function contactSupport() {
+  window.open("mailto:BuddyWinte@gmail.com.com", "_blank");
+}
 </script>
 
 <script>
