@@ -162,6 +162,7 @@ async function initNavbar() {
       document.body.innerHTML = "";
       document.body.appendChild(bannedModal);
       bannedModal.style.display = "flex";
+      bannedModal.classList.add("active");
       return;
     }
     if (!res.ok) {
