@@ -1,227 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formica - Friendly Forms</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Comic Sans MS', 'Segoe UI', 'Arial', sans-serif;
-    }
-    body {
-      background: #e0f7f1;
-      color: #333;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    border-radius: 0 0 25px 25px;
-    background: #77d9b6;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: background 0.3s;
-  }
-
-  .navbar:hover {
-    background: #6cc9a4;
-  }
-
-  .navbar h1 {
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.2s;
-  }
-
-  .navbar h1:hover {
-    transform: scale(1.1);
-  }
-
-  .nav-right a {
-    text-decoration: none;
-    color: #fff;
-    margin-left: 15px;
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 25px;
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .nav-right a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: scale(1.05);
-  }
-
-
-  .nav-right a.cta {
-    background: #3eb489;
-    padding: 10px 25px;
-    font-weight: bold;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  }
-
-  .nav-right a.cta:hover {
-    background: #36a37f;
-    transform: scale(1.1);
-  }
-
-    main {
-      flex: 1;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    main h2 {
-      font-size: 3rem;
-      color: #3eb489;
-      margin-bottom: 15px;
-    }
-    main p {
-      font-size: 1.3rem;
-      color: #444;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      background: #3eb489;
-      color: #fff;
-      padding: 15px 35px;
-      border: none;
-      border-radius: 20px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: transform 0.2s, background 0.2s;
-    }
-    .cta-button:hover {
-      transform: scale(1.05);
-      background: #36a37f;
-    }
-    section.features {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 50px;
-      flex-wrap: wrap;
-    }
-    .feature-card {
-      background: #d9f3ed;
-      padding: 25px;
-      border-radius: 20px;
-      width: 260px;
-      box-shadow: 2px 6px 15px rgba(0,0,0,0.08);
-      transition: transform 0.2s;
-    }
-    .feature-card:hover {
-      transform: translateY(-7px);
-    }
-    .feature-card h3 {
-      margin-bottom: 12px;
-      color: #3eb489;
-    }
-
-    footer {
-      background: #a6e3d0;
-      padding: 20px 40px;
-      text-align: center;
-      color: #333;
-      border-top: 2px solid #77d9b6;
-    }
-    .mascot {
-      width: 120px;
-      height: 120px;
-      background: #3eb489;
-      border-radius: 50%;
-      margin: 25px auto;
-      position: relative;
-      animation: bounce 2s infinite;
-    }
-    .mascot::after {
-      content: "😺";
-      font-size: 4rem;
-      position: absolute;
-      top: 15%;
-      left: 15%;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-    @media (max-width: 768px) {
-      section.features {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inconsolata:wght@200..900&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+<title>Formika - Fun Forms for Everyone</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav id="navbar-loggedout" class="navbar">
+
+<!-- Navbar -->
+<nav class="navbar">
   <div class="nav-left">
-    <h1>Formica</h1>
+    <h1><img id="navbar-logo" src="imgs/3.png" alt="Formica Logo"> Formika</h1>
   </div>
   <div class="nav-right">
     <a href="#">Home</a>
     <a href="#">Features</a>
-    <a href="#">Pricing</a>
-    <a href="#" class="cta">Login</a>
-  </div>
-</nav>
-<nav id="navbar-loggedin" class="navbar" style="display:none;">
-  <div class="nav-left">
-    <h1>Formica</h1>
-  </div>
-  <div class="nav-right">
-    <a href="#">Dashboard</a>
-    <a href="#">My Forms</a>
-    <a href="#">Templates</a>
-    <a href="#">Settings</a>
-    <a href="#" class="cta">Logout</a>
+    <a href="signup.html" class="cta">Login</a>
   </div>
 </nav>
 
-  <main>
-    <h2>Welcome to Formica!</h2>
-    <p>yap yap yap</p>
-    <button class="cta-button" onclick="alert('Placeholder action!')">Get Started</button>
+<main>
+  <h2>Hey there, Friend!</h2>
+  <p>We make creating forms as fun as squishing slime!</p>
+  <button class="cta-button" onclick="alert('Let’s get started!')">Get Started</button>
 
-    <div class="mascot"></div>
+  <div class="mascot">
+    <img src="imgs/3.png" alt="Formika Logo">
+  </div>
+</main>
 
-    <section class="features">
-      <div class="feature-card">
-        <h3>yap</h3>
-        <p>yap yap yap yap yap</p>
-      </div>
-      <div class="feature-card">
-        <h3>yap</h3>
-        <p>yap yap yap yap yap</p>
-      </div>
-      <div class="feature-card">
-        <h3>yap</h3>
-        <p>yap yap yap yap yap</p>
-      </div>
-    </section>
-  </main>
+<section class="features-section">
+  <h2>Why You’ll Love Formika</h2>
+  <div class="features">
+    <div class="feature-card">
+      <h3>Super Fun</h3>
+      <p>Bright colors, wiggly shapes, and animated mascots make building forms playful!</p>
+    </div>
+    <div class="feature-card">
+      <h3>Easy Peasy</h3>
+      <p>Drag, drop, and laugh your way to creating forms in seconds.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Everyone’s Welcome</h3>
+      <p>Accessible, inclusive, and designed for fun no matter who you are.</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 Formica. All rights reserved. | Friendly forms for everyone.
-  </footer>
+<footer>
+  &copy; 2025 Formika. All rights reserved. Fun forms for everyone!
+</footer>
 
 </body>
 </html>

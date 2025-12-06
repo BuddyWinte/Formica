@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inconsolata:wght@200..900&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+<title>Formica - Sign Up</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-left">
+    <h1><img id="navbar-logo" src="imgs/3.png" alt="Formica Logo"> Formica</h1>
+  </div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="#">Features</a>
+    <a href="#" class="cta">Login</a>
+  </div>
+</nav>
+<main>
+  <h2>Join the Fun!</h2>
+  <p>Create your account and start making friendly forms!</p>
+  <form id="signup-form">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    <button type="submit">Sign Up</button>
+  </form>
+  <div class="mascot"><img src="imgs/3.png" alt="Formica Logo"></div>
+</main>
+<footer>
+  &copy; 2025 Formica. All rights reserved. Fun forms for everyone!
+</footer>
+<script>
+  const form = document.getElementById('signup-form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert(`Welcome aboard, ${form.username.value}! 🎉`);
+    form.reset();
+  });
+</script>
+</body>
+</html>
