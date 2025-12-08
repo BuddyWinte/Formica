@@ -1,232 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inconsolata:wght@200..900&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
-<title>Formika - Fun Forms for Everyone</title>
-<meta name="description" content="Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime! Perfect for quizzes, surveys, and more.">
-<meta name="keywords" content="forms, fun forms, custom forms, surveys, quizzes, form builder, Formika, interactive forms, online forms">
-<meta name="author" content="Formika Team">
-<link rel="icon" href="imgs/favicon.png" type="image/png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Formika - Fun Forms for Everyone">
-<meta property="og:description" content="Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime! Perfect for quizzes, surveys, and more.">
-<meta property="og:image" content="https://formica.pages.dev/imgs/1.png">
-<meta property="og:url" content="https://formica.pages.dev/">
-<meta property="og:site_name" content="Formika">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Formika - Fun Forms for Everyone">
-<meta name="twitter:description" content="Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime! Perfect for quizzes, surveys, and more.">
-<meta name="twitter:image" content="https://formica.pages.dev/imgs/1.png">
-<meta name="twitter:site" content="@FormikaOfficial">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Formika",
-  "url": "https://formica.pages.dev/",
-  "description": "Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime!",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Formika Team",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://formica.pages.dev/imgs/1.png"
-    }
-  }
-}
-</script>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inconsolata:wght@200..900&family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formika - Fun Forms for Everyone</title>
+    <meta
+      name="description"
+      content="Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime! Perfect for quizzes, surveys, and more."
+    />
+    <meta
+      name="keywords"
+      content="forms, fun forms, custom forms, surveys, quizzes, form builder, Formika, interactive forms, online forms"
+    />
+    <meta name="author" content="Formika Team" />
+    <link rel="icon" href="imgs/favicon.png" type="image/png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Formika - Fun Forms for Everyone" />
+    <meta
+      property="og:description"
+      content="Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime! Perfect for quizzes, surveys, and more."
+    />
+    <meta property="og:image" content="https://formica.pages.dev/imgs/1.png" />
+    <meta property="og:url" content="https://formica.pages.dev/" />
+    <meta property="og:site_name" content="Formika" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Formika - Fun Forms for Everyone" />
+    <meta
+      name="twitter:description"
+      content="Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime! Perfect for quizzes, surveys, and more."
+    />
+    <meta name="twitter:image" content="https://formica.pages.dev/imgs/1.png" />
+    <meta name="twitter:site" content="@FormikaOfficial" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Formika",
+        "url": "https://formica.pages.dev/",
+        "description": "Formika lets you create and customize your own fun forms. Make forms as fun as squishing slime!",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Formika Team",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://formica.pages.dev/imgs/1.png"
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="logged-out-navbar" class="navbar logged-out-navbar">
+      <div class="nav-left">
+        <h1>
+          <img id="navbar-logo" src="imgs/3.png" alt="Formica Logo" /> Formika
+        </h1>
+      </div>
+      <div class="nav-right">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="signup.html" class="cta">Login</a>
+      </div>
+    </nav>
 
-<!-- Navbar -->
-<nav id="logged-out-navbar" class="navbar logged-out-navbar">
-  <div class="nav-left">
-    <h1><img id="navbar-logo" src="imgs/3.png" alt="Formica Logo"> Formika</h1>
-  </div>
-  <div class="nav-right">
-    <a href="#">Home</a>
-    <a href="#">Features</a>
-    <a href="signup.html" class="cta">Login</a>
-  </div>
-</nav>
+    <nav
+      id="logged-in-navbar"
+      class="navbar logged-in-navbar"
+      style="display: none"
+    >
+      <div class="nav-left">
+        <h1>
+          <img id="navbar-logo" src="imgs/3.png" alt="Formika Logo" />
+          Formika
+        </h1>
+        <div class="nav-links">
+          <a href="#">Dashboard</a>
+          <a href="#">My Forms</a>
+          <a href="#">Analytics</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+      <div class="nav-user">
+        <div class="user-info">
+          <span class="username"
+            >Hello, <strong id="username">User</strong></span
+          >
+          <span class="role" id="role">User</span>
+        </div>
+        <div class="user-dropdown">
+          <button class="dropdown-btn">⚙️</button>
+          <div class="dropdown-menu">
+            <a href="#">Settings</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-
-<nav id="logged-in-navbar" class="navbar logged-in-navbar" style="display: none;">
-  <div class="nav-left">
-    <h1>
-      <img id="navbar-logo" src="imgs/3.png" alt="Formika Logo"> 
-      Formika
-    </h1>
-    <div class="nav-links">
-      <a href="#">Dashboard</a>
-      <a href="#">My Forms</a>
-      <a href="#">Analytics</a>
-      <a href="#">Support</a>
-    </div>
-  </div>
-  <div class="nav-user">
-    <div class="user-info">
-      <span class="username">Hello, <strong id="username">User</strong></span>
-      <span class="role" id="role">User</span>
-    </div>
-    <div class="user-dropdown">
-      <button class="dropdown-btn">⚙️</button>
-      <div class="dropdown-menu">
-        <a href="#">Settings</a>
-        <a href="#">Profile</a>
-        <a href="#">Logout</a>
+    <div id="bannedModal" class="modal banned-modal">
+      <div class="modal-content banned-content">
+        <button class="close" onclick="logoutAndClose()">×</button>
+        <h2>Uh-oh!</h2>
+        <p>
+          Your account is banned from Formika :c<br />
+          This ban is indefinite and cannot be undone...
+        </p>
+        <blockquote>
+          If you think this is a mistake, feel free to email us or join our
+          discord (recommended you join the discord!)
+        </blockquote>
+        <button class="cta-button" onclick="contactSupport()">
+          Contact Support
+        </button>
       </div>
     </div>
-  </div>
-</nav>
 
-<div id="bannedModal" class="modal banned-modal">
-  <div class="modal-content banned-content">
-    <button class="close" onclick="logoutAndClose()">×</button>
-    <h2>Uh-oh!</h2>
-    <p>
-      Your account is banned from Formika :c<br>
-      This ban is indefinite and cannot be undone...
-    </p>
-    <blockquote>
-      If you think this is a mistake, feel free to email us or join our discord (recommended you join the discord!)
-    </blockquote>
-    <button class="cta-button" onclick="contactSupport()">Contact Support</button>
-  </div>
-</div>
-
-<div class="alert-banner" id="alertBanner" style="display: none;">
-  <span id="alertBannerText">This is an alert message!</span>
-  <button class="close-btn" onclick="closeAlert()">×</button>
-</div>
-
-<main>
-  <h2>Hey there, Friend!</h2>
-  <p>We make creating forms as fun as squishing slime!</p>
-  <button class="cta-button" onclick="alert('Let’s get started!')">Get Started</button>
-
-  <div class="mascot">
-    <img src="imgs/3.png" alt="Formika Logo">
-  </div>
-</main>
-
-<section class="features-section">
-  <h2>Why You’ll Love Formika</h2>
-  <div class="features">
-    <div class="feature-card">
-      <h3>yap</h3>
-      <p>yap yap yap yap yap yap yap</p>
+    <div class="alert-banner" id="alertBanner" style="display: none">
+      <span id="alertBannerText">This is an alert message!</span>
+      <button class="close-btn" onclick="closeAlert()">×</button>
     </div>
-    <div class="feature-card">
-      <h3>yap</h3>
-      <p>yap yap yap yap yap yap yap</p>
-    </div>
-    <div class="feature-card">
-      <h3>yap</h3>
-      <p>yap yap yap yap yap yap yap</p>
-    </div>
-  </div>
-</section>
 
-<footer>
-  &copy; 2025 Formika. All rights reserved. Fun forms for everyone!
-</footer>
+    <main>
+      <h2>Hey there, Friend!</h2>
+      <p>We make creating forms as fun as squishing slime!</p>
+      <button class="cta-button" onclick="alert('Let’s get started!')">
+        Get Started
+      </button>
 
-<script>
-async function initNavbar() {
-  const token = localStorage.getItem("token");
-  const loggedInNav = document.getElementById("logged-in-navbar");
-  const loggedOutNav = document.getElementById("logged-out-navbar");
-  const bannedModal = document.getElementById("bannedModal");
-  if (!token) {
-    loggedInNav.style.display = "none";
-    loggedOutNav.style.display = "flex";
-    return;
-  }
-  try {
-    const res = await fetch("https://formika.buddywinte.workers.dev/userInfo", {
-      method: "GET",
-      headers: {
-        "Authorization": `Bearer ${token}`,
-      },
-    });
+      <div class="mascot">
+        <img src="imgs/3.png" alt="Formika Logo" />
+      </div>
+    </main>
 
-    const data = await res.json();
+    <section class="features-section">
+      <h2>Why You’ll Love Formika</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Customisation</h3>
+          <p>
+            Custom Branding with your Logo and Colors
+            <br />
+            Personalized Thank You Messages
+            <br />
+            Branded Email Notifications
+            <br />
+            Custom Domain Support
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Smart Logic</h3>
+          <p>
+            Conditional Question Branching
+            <br />
+            Skip Logic Based on Answers
+            <br />
+            Dynamic Content that Adapts to Responses
+            <br />
+            Pre-filled Forms from URL Parameters
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Collaboration</h3>
+          <p>
+            Real-time Response Notifications
+            <br />
+            Team Access and Permissions
+            <br />
+            Shared Response Analytics
+            <br />
+            Comment and Review Workflows
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Integration</h3>
+          <p>
+            Direct Spreadsheet Sync
+            <br />
+            Email Automation
+            <br />
+            Calendar Integration
+            <br />
+            Third-party App Connections (Zapier, etc.)
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Response Management</h3>
+          <p>
+            Response Validation Rules
+            <br />
+            File Upload Capabilities
+            <br />
+            Response Editing after Submission
+            <br />
+            Export to Multiple Formats (CSV, PDF, etc.)
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Analytics</h3>
+          <p>
+            Visual Charts and Graphs
+            <br />
+            Summary Statistics
+            <br />
+            Individual Respomse Review
+            <br />
+            Time-stamped data tracking
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Accessibility</h3>
+          <p>
+            Mobile-Responsive Design
+            <br />
+            Multi-Language Support
+            <br />
+            Keyboard Navigation
+            <br />
+            Screen Reader Compatibility
+          </p>
+        </div>
+      </div>
+    </section>
 
-    if (!res.ok && data.error && data.error.includes("Access Denied")) {
-      document.body.innerHTML = "";
-      document.body.appendChild(bannedModal);
-      bannedModal.style.display = "flex";
-      bannedModal.classList.add("active");
-      return;
-    }
-    if (!res.ok) {
-      console.error("Error fetching user info:", data.error);
-      loggedInNav.style.display = "none";
-      loggedOutNav.style.display = "flex";
-      return;
-    }
-    loggedInNav.style.display = "flex";
-    loggedOutNav.style.display = "none";
-    if (data.username) document.getElementById("username").textContent = data.username;
-    if (data.role) document.getElementById("role").textContent = data.role;
-  } catch (err) {
-    console.error("Failed to fetch user info:", err);
-    loggedInNav.style.display = "none";
-    loggedOutNav.style.display = "flex";
-  }
-}
-initNavbar();
-function toggleDropdown() {
-  const menu = document.getElementById("settings-dropdown");
-  menu.classList.toggle("show");
-}
-function logoutAndClose() {
-  localStorage.removeItem("token");
-  window.location.reload();
-}
-function contactSupport() {
-  window.open("mailto:BuddyWinte@gmail.com.com", "_blank");
-}
-</script>
+    <footer>
+      &copy; 2025 Formika. All rights reserved. Fun forms for everyone!
+    </footer>
 
-<script>
-    fetch('https://formika.buddywinte.workers.dev/alert')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(data => {
-    /*
+    <script>
+      async function initNavbar() {
+        const token = localStorage.getItem("token");
+        const loggedInNav = document.getElementById("logged-in-navbar");
+        const loggedOutNav = document.getElementById("logged-out-navbar");
+        const bannedModal = document.getElementById("bannedModal");
+        if (!token) {
+          loggedInNav.style.display = "none";
+          loggedOutNav.style.display = "flex";
+          return;
+        }
+        try {
+          const res = await fetch(
+            "https://formika.buddywinte.workers.dev/userInfo",
+            {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+
+          const data = await res.json();
+
+          if (!res.ok && data.error && data.error.includes("Access Denied")) {
+            document.body.innerHTML = "";
+            document.body.appendChild(bannedModal);
+            bannedModal.style.display = "flex";
+            bannedModal.classList.add("active");
+            return;
+          }
+          if (!res.ok) {
+            console.error("Error fetching user info:", data.error);
+            loggedInNav.style.display = "none";
+            loggedOutNav.style.display = "flex";
+            return;
+          }
+          loggedInNav.style.display = "flex";
+          loggedOutNav.style.display = "none";
+          if (data.username)
+            document.getElementById("username").textContent = data.username;
+          if (data.role)
+            document.getElementById("role").textContent = data.role;
+        } catch (err) {
+          console.error("Failed to fetch user info:", err);
+          loggedInNav.style.display = "none";
+          loggedOutNav.style.display = "flex";
+        }
+      }
+      initNavbar();
+      function toggleDropdown() {
+        const menu = document.getElementById("settings-dropdown");
+        menu.classList.toggle("show");
+      }
+      function logoutAndClose() {
+        localStorage.removeItem("token");
+        window.location.reload();
+      }
+      function contactSupport() {
+        window.open("mailto:BuddyWinte@gmail.com.com", "_blank");
+      }
+    </script>
+
+    <script>
+      fetch("https://formika.buddywinte.workers.dev/alert")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          /*
     <div class="alert-banner alert" id="alertBanner">
   <span id="alertBannerText">This is an alert message!</span>
   <button class="close-btn" onclick="closeAlert()">×</button>
 </div>
     */
-const banner = document.getElementById("alertBanner");
-const bannerText = document.getElementById("alertBannerText");
-console.log(data.enabled);
-console.log(data.message);
-console.log(data.status);
-if (data.enabled) {
-  banner.style.display = "flex";
-  banner.classList.add(data.status);
-  bannerText.textContent = data.message;
-} else {
-  banner.style.display = "none";
-}
-  })
-  .catch(error => {
-    console.error('Error fetching API:', error);
-  });
-</script>
-
-</body>
+          const banner = document.getElementById("alertBanner");
+          const bannerText = document.getElementById("alertBannerText");
+          console.log(data.enabled);
+          console.log(data.message);
+          console.log(data.status);
+          if (data.enabled) {
+            banner.style.display = "flex";
+            banner.classList.add(data.status);
+            bannerText.textContent = data.message;
+          } else {
+            banner.style.display = "none";
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching API:", error);
+        });
+    </script>
+  </body>
 </html>
