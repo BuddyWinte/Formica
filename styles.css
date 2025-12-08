@@ -391,7 +391,7 @@ main p {
 
 .feature-card {
   background: #fff0f5;
-  width: 260px;
+  width: auto;
   padding: 30px 25px;
   border-radius: 50px 20px 50px 20px;
   -webkit-box-shadow: 0 8px 25px rgba(0,0,0,0.1);
